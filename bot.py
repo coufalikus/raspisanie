@@ -10,7 +10,7 @@ updater = Updater(token='646056076:AAHTUqGeOBavOu_FGnR8LmAK_zZ69D2vyq0')  # ту
 
 start_handler = CommandHandler('start', start)  # этот обработчик реагирует
                                                 # только на команду /start
-users_counter = CommandHandler('users', users)
+#users_counter = CommandHandler('users', users)
 
 updater.dispatcher.add_handler(start_handler)   # регистрируем в госреестре обработчиков
 updater.start_polling()  # поехали!
