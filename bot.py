@@ -14,7 +14,7 @@ def textMessage(bot, update):
     response = 'Получил Ваше сообщение: ' + update.message.text
     bot.send_message(chat_id=update.message.chat_id, text=response)
     if update.message.text=='/members':
-    	response=.getChatMembersCount(chat_id=update.message.chat_id)
+    	response=bot.getChatMembersCount(chat_id=update.message.chat_id)
     	bot.send_message(chat_id=update.message.chat_id, text=response)
 
 updater = Updater(token='646056076:AAHTUqGeOBavOu_FGnR8LmAK_zZ69D2vyq0')  # тут токен, который выдал вам Ботский Отец!
