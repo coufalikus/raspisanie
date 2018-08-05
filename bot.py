@@ -13,7 +13,7 @@ def start(bot, update):
 def textMessage(bot, update):
     response = 'Получил Ваше сообщение: ' + update.message.text
     bot.send_message(chat_id=update.message.chat_id, text=response)
-    if update.message.text=='/members':
+    if update.message.text=='members':
     	response=bot.getChatMembersCount(chat_id=update.message.chat_id)
     	bot.send_message(chat_id=update.message.chat_id, text=response)
 
