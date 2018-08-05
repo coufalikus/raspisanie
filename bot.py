@@ -5,7 +5,10 @@ from telegram.ext import CommandHandler  # модуль почему-то про
 
 def start(bot, update):
     # подробнее об объекте update: https://core.telegram.org/bots/api#update
-    bot.sendMessage(chat_id=update.message.chat_id, text="he he")
+    bot.sendMessage(chat_id=update.message.chat_id, text="Привет! ")
+    bot.sendMessage(chat_id=update.message.chat_id, text="Сейчас я посчитаю сколько нас!")
+    count=telegram.getChatMembersCount(chat_id=update.message.chat_id)
+    bot.sendMessage(chat_id=update.message.chat_id, text="Получилось: "+count)
                     
 updater = Updater(token='646056076:AAHTUqGeOBavOu_FGnR8LmAK_zZ69D2vyq0')  # тут токен, который выдал вам Ботский Отец!
 
