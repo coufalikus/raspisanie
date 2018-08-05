@@ -3,7 +3,7 @@
 #from telegram.ext import CommandHandler  # модуль почему-то просто telegram ¯\_(ツ)_/¯
 #from telegram.ext import MessageHandler
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-def add(bot, update):
+def addMember(bot, update):
 	bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
 def start(bot, update):
     # подробнее об объекте update: https://core.telegram.org/bots/api#update
