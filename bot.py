@@ -2,6 +2,7 @@
 from telegram.ext import Updater         # пакет называется python-telegram-bot, но Python-
 from telegram.ext import CommandHandler  # модуль почему-то просто telegram ¯\_(ツ)_/¯
 from telegram.ext import MessageHandler
+from telegram.ext import Filters
 
 def start(bot, update):
     # подробнее об объекте update: https://core.telegram.org/bots/api#update
