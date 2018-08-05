@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from telegram.ext import Updater         # пакет называется python-telegram-bot, но Python-
-from telegram.ext import CommandHandler  # модуль почему-то просто telegram ¯\_(ツ)_/¯
-from telegram.ext import MessageHandler
-from telegram.ext import Filters
+#from telegram.ext import Updater         # пакет называется python-telegram-bot, но Python-
+#from telegram.ext import CommandHandler  # модуль почему-то просто telegram ¯\_(ツ)_/¯
+#from telegram.ext import MessageHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 def start(bot, update):
     # подробнее об объекте update: https://core.telegram.org/bots/api#update
@@ -21,5 +21,5 @@ start_handler = CommandHandler('start', start)  # этот обработчик 
 text_message_handler = MessageHandler(Filters.text, textMessage)
 
 updater.dispatcher.add_handler(start_handler)   # регистрируем в госреестре обработчиков
-dispatcher.add_handler(text_message_handler)
+updater.dispatcher.add_handler(text_message_handler)
 updater.start_polling()  # поехали!
